@@ -1,5 +1,5 @@
 .sidebar {
-    @apply fixed left-4 top-4 rounded-lg ml-5 mt-5 bg-white/5 w-56 text-lg whitespace-nowrap overflow-hidden;
+    @apply relative left-4 top-4 rounded-lg ml-5 mt-5 bg-white/5 w-56 text-lg whitespace-nowrap overflow-hidden;
 
     &.collapsed {
         .menu {

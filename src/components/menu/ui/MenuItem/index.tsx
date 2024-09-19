@@ -10,9 +10,12 @@ export const MenuItem: React.FC<Props> = ({ item }) => {
 	const isCollapsed = useAtomValue(isCollapsedAtom);
 
 	return (
-		<a href={item.link}>
-			<item.icon />
-			{!isCollapsed && <span>{item.name}</span>}
+		<a 
+			href={item.link}
+			target="_blank"
+			rel="noreferrer">
+				<item.icon />
+				{!isCollapsed && <span>{item.name}</span>}
 		</a>
 	);
 };

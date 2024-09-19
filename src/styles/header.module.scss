@@ -1,0 +1,26 @@
+.header {
+    @apply bg-white/5 py-4 border-b border-white/50;
+}
+
+.nav {
+    @apply max-w-[1280px] mx-auto flex items-center justify-between px-4;
+}
+
+.title {
+    @apply text-3xl font-bold;
+}
+
+.button {
+    @apply relative p-3 rounded-full text-[#989aa2];
+
+    &:hover {
+        &::after {
+            @apply opacity-5 bg-[#989aa2];
+        }
+    }
+
+    &::after {
+        @apply absolute -z-10 rounded-full w-full h-full top-0 left-0 opacity-0 bg-black;
+        content: "";
+    }
+}
