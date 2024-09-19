@@ -1,0 +1,19 @@
+.sidebar{
+    @apply fixed left-4 top-4 rounded-lg ml-5 mt-5 bg-white/5 w-56 py-2 text-lg;
+
+    .menu{
+        >a{
+            @apply flex gap-2 py-3 px-5 transition-all duration-300 ease-in-out;
+
+            &:hover{
+                @apply bg-white/10;
+                >svg{
+                    @apply text-purple-400 transition-colors duration-300 ease-in-out;
+                }
+
+            }
+        }
+      
+    }
+
+}
