@@ -1,19 +1,37 @@
-.sidebar{
-    @apply fixed left-4 top-4 rounded-lg ml-5 mt-5 bg-white/5 w-56 py-2 text-lg;
+.sidebar {
+    @apply fixed left-4 top-4 rounded-lg ml-5 mt-5 bg-white/5 w-56 text-lg whitespace-nowrap overflow-hidden;
 
-    .menu{
-        >a{
-            @apply flex gap-2 py-3 px-5 transition-all duration-300 ease-in-out;
+    &.collapsed {
+        .menu {
+            > a {
+                @apply p-2 justify-center;
 
-            &:hover{
-                @apply bg-white/10;
-                >svg{
-                    @apply text-purple-400 transition-colors duration-300 ease-in-out;
+                &:first-child{
+                    @apply mt-10;  
                 }
-
             }
         }
-      
+
+        .toggle{
+            @apply left-0; 
+        }
     }
 
+    .menu {
+        > a {
+            @apply flex items-center gap-2 py-3 px-5 transition-all duration-300 ease-in-out;
+
+            &:hover {
+                @apply bg-white/10 text-purple-400 transition-colors duration-300 ease-in-out;
+            }
+        }
+    }
+}
+
+.toggle {
+    @apply absolute top-0 right-0 w-[60px] h-10 flex items-center justify-center transition-all duration-300 ease-in-out opacity-50;
+
+    &:hover {
+        @apply opacity-100;
+    }
 }
